@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 
+EN/JP switch button
+-->
+<html lang='ja'>
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+    maximum-scale=1, minimum-scale=1, user-scalable=yes"
+    />
+    <title>フォートナイト英語辞書 / FORTNITE English Dictionary</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" href="dictionary.ico" type="image/x-icon"> 
+  </head>
+  <body>
+    <div class="header">
+      <h1 lang='ja'>フォートナイト英語辞書</h1>
+    </div>
+
+    <div class="wrapper">
+      <div class="words">
+        <input type="text" id="search" placeholder="search ..." />
+        <button id="search_button" onclick="search()">Go</button>
+        <ul id="word_list"></ul>
+      </div>
+
+      <div class="word">
+        <h3 id="word_text"></h3>
+        <p id="definition"></p>
+        <p id='definition2'></p>
+
+        <hr />
+
+        <h3>Related words:</h3>
+        <ul id="related"></ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>created by Gnocchi</p>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <a href="https://www.youtube.com/channel/UCeQBWK2EF4yJUBsUN3vHHDw" target="_blank" class="fa fa-youtube"></a>
+      <a href="https://twitter.com/Gnocchi_Games" target=+ class="fa fa-twitter"></a>
+    </div>
+    <script type="text/javascript" src="index.js" src="en_to_jp.js" src="jp-to-en.js"></script>
+  </body>
+</html>
