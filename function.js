@@ -22,7 +22,20 @@ init();
 show = (i) => {
   document.getElementById("word_text").innerHTML = dictionary[i].word;
   document.getElementById("definition").innerHTML = dictionary[i].def1;
-  document.getElementById('definition2').innerHTML = dictionary[i].def2;
+
+  // check if def2 exists and it matches with it
+
+  if (dictionary[i].def2 && dictionary[i].def2.length >= 1) {
+      document.getElementById('definition2').innerHTML = dictionary[i].def2;
+  } else {
+    document.getElementById('definition2').innerHTML = '';
+  }
+  
+  if (dictionary[i].etym)  {
+    document.getElementById('etym').innerHTML = dictionary[i].etym;
+  } else {
+    document.getElementById('etym').innerHTML = "";
+  }
 
   let list = "";
 
@@ -41,6 +54,8 @@ search = () => {
   }
 
   found = -1; // initialize found to false
+
+  // check if altMatch exists and it matches with it
 
   for (let i = 0; i < dictionary.length; i++) {
     let sTerms = [];
