@@ -8,7 +8,7 @@ EN/JP switch button
       charset="utf-8"
       name="viewport"
       content="width=device-width, initial-scale=1,
-    maximum-scale=1, minimum-scale=1, user-scalable=yes"
+               minimum-scale=1, user-scalable=yes"
     />
     <title>フォートナイト英語辞書 / FORTNITE English Dictionary</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -22,7 +22,6 @@ EN/JP switch button
     <div class="wrapper">
       <div class="words">
         <input type="text" id="search" placeholder="search ..." />
-        <button id="search_button" onclick="search()">Go</button>
         <ul id="word_list"></ul>
       </div>
 
@@ -39,7 +38,7 @@ EN/JP switch button
     </div>
 
     <div class="footer">
-      <p>created by Gnocchi</p>
+      <p class='credit'>created by Gnocchi</p>
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -47,6 +46,7 @@ EN/JP switch button
       <a href="https://www.youtube.com/channel/UCeQBWK2EF4yJUBsUN3vHHDw" target="_blank" class="fa fa-youtube"></a>
       <a href="https://twitter.com/Gnocchi_Games" target=+ class="fa fa-twitter"></a>
     </div>
-    <script type="text/javascript" src="index.js" src="en_to_jp.js" src="jp-to-en.js"></script>
+    <script src="dictionary.js"></script>
+    <script src="function.js"></script>
   </body>
 </html>

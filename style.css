@@ -20,7 +20,7 @@ body {
 
 .header {
   font-size: 15px;
-  width: 70%;
+  width: 50%;
   margin: 40px auto 0px;
   color: white;
   background: #483d8b;
@@ -34,7 +34,7 @@ p {
 }
 
 .wrapper {
-  width: 70%;
+  width: 50%;
   margin: 0px auto;
   border: 1px solid gray;
 }
@@ -59,7 +59,7 @@ p {
 }
 
 #word_list {
-  max-height: 400px;
+  max-height: 600px;
   overflow-y: scroll;
 }
 
@@ -125,7 +125,7 @@ button {
 
 .footer {
   font-size: 25px;
-  width: 70%;
+  width: 50%;
   margin: 0px auto 0px;
   color: white;
   background: #483d8b;
