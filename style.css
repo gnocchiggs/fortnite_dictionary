@@ -213,7 +213,7 @@ button {
   }
   
   #word_list {
-    max-height: 400px;
+    max-height: 350px;
     overflow-y: scroll;
   }
   
@@ -287,6 +287,10 @@ button {
     padding: 0 0 10px 0;
   }
   
+  .credit {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
   
   .fa {
     padding: 15px;
