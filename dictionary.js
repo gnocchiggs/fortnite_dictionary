@@ -3,22 +3,25 @@
 const dictionary = [
   {
     word: "AK",
-    def1: `ヘビーアサルトライフル、実在している銃の"AK-47"に由来`,
+    def1: 'ヘビーアサルトライフル',
     def2: [""],
+    etym: `実在している銃の"AK-47"に由来`,
     rel: ["AR"],
     altMatch: ["ak", 'ヘビアサ'],
   }, 
   {
     word: "AR",
     def1: `アサルトライフル`,
-    def2: [`"assault rifle"の略`],
+    def2: [""],
+    etym: `"assault rifle"の略`,
     rel: ["AK"],
     altMatch: ["ar", 'アサルト'],
   },
   {
     word: "ammo",
-    def1: `"ammunition"の略、弾、弾薬`,
+    def1: "弾、弾薬",
     def2: [""],
+    etym: `"ammunition"の略`,
     rel: [""],
   },
   {
@@ -65,16 +68,18 @@ const dictionary = [
   },
   {
     word: "GG",
-    def1: `"good game(s)"の略、直訳すると「良い試合」という意味`,
-    def2: ["対戦相手を労（ねぎら）う時や、「対戦ありがとうございました」と同じ意味としても使われる"],
+    def1: "「良い戦いだった」と対戦相手を労う意味",
+    def2: ["「対戦ありがとうございました」と同じ意味としても使われる"],
     rel: ["pop off"],
+    etym: `"good game(s)"の略、直訳すると「良い試合」という意味`,
     altMatch: ["good game", "good games", "ggs", "gg"],
   },
   {
     word: "goat",
-    def1: `"greatest of the time"の略、直訳すると「史上最高」という意味<br>とても上手な人`,
+    def1: `とても上手`,
     def2: [""],
     rel: ["cracked"],
+    etym: `"greatest of all time"の略、直訳すると「史上最高」という意味`,
     altMatch: ["goated"],
   },
   {
@@ -106,6 +111,12 @@ const dictionary = [
     def1: "大ダメージを与える",
     def2: [""],
     rel: ["beam", "hit"],
+  },
+  {
+    word: "meta",
+    def1: "メタ",
+    def2: "現環境における最適な戦術",
+    rel: ['strat'],
   },
   {
     word: "mini",
@@ -159,7 +170,8 @@ const dictionary = [
   {
     word: "scrim",
     def1: "練習試合、スクリム",
-    def2: [`"scrimmage"の略`],
+    def2: [""],
+    etym: `"scrimmage"の略`,
     rel: ["comp", "match"],
   },
   {
@@ -185,8 +197,9 @@ const dictionary = [
   {
     word: "strat",
     def1: "戦術",
-    def2: [`"strategy"の略`],
+    def2: [""],
     rel: ["ressurect", "revive"],
+    etym: `"strategy"の略`,
     altMatch: ['strategy']
   },
   {
@@ -220,6 +233,7 @@ const dictionary = [
     word: "90s",
     def1: "縦積み",
     def2: [""],
+    etym: '1回の縦積みで90°進行方向が変わることから',
     rel: ["cranking", "build"],
   },
 ];
