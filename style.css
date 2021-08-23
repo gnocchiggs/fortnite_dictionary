@@ -1,0 +1,322 @@
+@font-face {
+  font-family: "Burbank Big Condensed";
+  src: url("//db.onlinewebfonts.com/t/800e985f75a5a56c2f7b4be502d286de.eot");
+  src: url("//db.onlinewebfonts.com/t/800e985f75a5a56c2f7b4be502d286de.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/800e985f75a5a56c2f7b4be502d286de.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/800e985f75a5a56c2f7b4be502d286de.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/800e985f75a5a56c2f7b4be502d286de.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/800e985f75a5a56c2f7b4be502d286de.svg#Burbank Big Condensed")
+      format("svg");
+}
+
+body {
+  font-size: 30px;
+  font-family: "Burbank Big Condensed";
+}
+
+.header {
+  font-size: 15px;
+  width: 70%;
+  margin: 40px auto 0px;
+  color: white;
+  background: #483d8b;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 8px 8px 0px 0px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.wrapper {
+  width: 70%;
+  margin: 0px auto;
+  border: 1px solid gray;
+}
+
+.wrapper:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.words {
+  width: 29%;
+  background: #dcdcdc;
+  padding-top: 10px;
+  float: left;
+}
+
+.word {
+  width: 60%;
+  float: left;
+  padding-left: 10px;
+}
+
+#word_list {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+li {
+  list-style-type: none;
+  line-height: 1.4em;
+}
+
+li:hover {
+  cursor: pointer;
+  color: #483d8b;
+}
+
+#definition {
+  margin-top: -30px;
+  margin-left: 10px;
+}
+
+#definition2 {
+  margin-left: 10px;
+}
+
+ul {
+  margin-left: -20px;
+}
+
+ul#related {
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+#related li {
+  display: inline;
+}
+
+#related li:not(:last-child)::after {
+  content: ", ";
+  margin: 0 4px 0 0;
+}
+
+h1:hover {
+  cursor: pointer;
+}
+
+h3 {
+  color: #483d8b;
+}
+
+#search {
+  margin-left: 10px;
+  width: 60%;
+  padding: 5px;
+  height: 13px;
+}
+
+button {
+  height: 27px;
+  background: #483d8b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.footer {
+  font-size: 25px;
+  width: 70%;
+  margin: 0px auto 0px;
+  color: white;
+  background: #483d8b;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 0px 0px 8px 8px;
+  padding: 0 0 10px 0;
+}
+
+
+.fa {
+  padding: 15px;
+  font-size: 25px;
+  width: 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+/* for smartphones */
+
+@media screen and (max-width: 480px) {
+  
+  body {
+    font-size: 15px;
+    font-family: "Burbank Big Condensed";
+  }
+  
+  .header {
+    font-size: 10px;
+    width: 70%;
+    margin: 40px auto 0px;
+    color: white;
+    background: #483d8b;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 8px 8px 0px 0px;
+  }
+  
+  p {
+    font-size: 10px;
+  }
+  
+  .wrapper {
+    width: 70%;
+    margin: 0px auto;
+    border: 1px solid gray;
+  }
+  
+  .wrapper:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  .words {
+    width: 29%;
+    background: #dcdcdc;
+    padding-top: 0px;
+    float: left;
+  }
+  
+  .word {
+    width: 60%;
+    float: left;
+    padding-left: 10px;
+  }
+  
+  #word_list {
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+  
+  li {
+    list-style-type: none;
+    line-height: 1.4em;
+  }
+  
+  li:hover {
+    cursor: pointer;
+    color: #483d8b;
+  }
+  
+  #definition {
+    margin-top: -15px;
+    margin-left: 10px;
+  }
+  
+  #definition2 {
+    margin-left: 10px;
+    margin-top: -7px;
+  }
+  
+  ul {
+    margin-left: -25px;
+  }
+  
+  ul#related {
+    margin-top: -15px;
+    margin-left: -30px;
+  }
+  
+  #related li {
+    display: inline;
+  }
+  
+  #related li:not(:last-child)::after {
+    content: ", ";
+    margin: 0 4px 0 0;
+  }
+  
+  h1:hover {
+    cursor: pointer;
+  }
+  
+  h3 {
+    color: #483d8b;
+  }
+  
+  #search {
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 60%;
+    padding: 5px;
+    height: 13px;
+  }
+  
+  button {
+    display: none;
+  }
+  
+  .footer {
+    font-size: 25px;
+    width: 70%;
+    margin: 0px auto 0px;
+    color: white;
+    background: #483d8b;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 0px 0px 8px 8px;
+    padding: 0 0 10px 0;
+  }
+  
+  
+  .fa {
+    padding: 15px;
+    font-size: 25px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55acee;
+    color: white;
+  }
+
+}
+
+@media screen and (max-width: 959px) {
+/* for tablet */
+}
