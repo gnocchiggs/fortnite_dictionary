@@ -418,6 +418,8 @@ const dictionary = [
     def1: '戦術',
     def2: [''],
     rel: ['ressurect', 'revive'],
+    example: `We lost to Qrei strat.`,
+    exampleJp: `Qreiムーブに負けた。<br>（回復アイテムを集めまくってひたすら安地外耐久する戦術）`,
     etym: `"strategy"の略`,
     altMatch: ['strategy'],
   },

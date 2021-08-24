@@ -16,7 +16,7 @@ EN/JP switch button
   </head>
   <body>
     <div class="header">
-      <h1 lang="ja">フォートナイト英語辞書α</h1>
+      <h1 lang="ja" id="title">FORTNITE English Dictionary α</h1>
     </div>
 
     <div class="wrapper">
@@ -26,22 +26,31 @@ EN/JP switch button
       </div>
 
       <div class="word">
+        <div id="intro">
+          <br />
+          <a
+            href="https://www.youtube.com/channel/UCeQBWK2EF4yJUBsUN3vHHDw"
+            target="blank"
+          >
+            <img src="img/twgnocchi.png" class="gnocchi" id="gnocchiImg" />
+          </a>
+        </div>
         <h3 id="word_text"></h3>
         <p id="definition"></p>
         <p id="definition2"></p>
 
-        <hr id="exampleHr" />
+        <hr id="exampleHr" class="hidden" />
 
         <p id="example"></p>
         <p id="exampleJp"></p>
 
-        <hr id="etymHr" />
+        <hr id="etymHr" class="hidden" />
 
         <p id="etym"></p>
 
-        <hr id="relHr" />
+        <hr id="relHr" class="hidden" />
 
-        <h3>Related words:</h3>
+        <h3 id="relatedWordText" class="visibility-hidden">Related words:</h3>
         <ul id="related"></ul>
       </div>
     </div>

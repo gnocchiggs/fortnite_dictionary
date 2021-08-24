@@ -1,4 +1,20 @@
-// search by japanese words too
+// search with japanese words too
+
+const exampleHr = document.getElementById('exampleHr');
+const etymHr = document.getElementById('etymHr');
+const relHr = document.getElementById('relHr');
+const relWordText = document.getElementById('relatedWordText');
+const intro = document.getElementById('intro');
+const title = document.getElementById('title');
+const word = document.getElementById('word_text');
+const def1 = document.getElementById('definition');
+const def2 = document.getElementById('definition2');
+const etym = document.getElementById('etym');
+const example = document.getElementById('example');
+const exampleJp = document.getElementById('exampleJp');
+const relWord = document.getElementById('relatedWordText');
+const rel = document.getElementById('related');
+const gnocchiImg = document.getElementById('gnocchiImg');
 
 init = () => {
   document.addEventListener('keyup', event => {
@@ -10,6 +26,24 @@ init = () => {
     }
   });
 
+  title.addEventListener('click', () => {
+    intro.classList.remove('hidden');
+    gnocchiImg.classList.remove('hidden');
+    word.classList.add('hidden');
+    def1.classList.add('hidden');
+    def2.classList.add('hidden');
+    example.classList.add('hidden');
+    exampleJp.classList.add('hidden');
+    etym.classList.add('hidden');
+    relWord.classList.add('hidden');
+    rel.classList.add('hidden');
+    relHr.classList.add('hidden');
+    exampleHr.classList.add('hidden');
+    etymHr.classList.add('hidden');
+  });
+
+  // loads word list on the side bar
+
   for (let i = 0; i < dictionary.length; i++) {
     document.getElementById('word_list').innerHTML +=
       "<li onclick='show(" + i + ")'>" + dictionary[i].word + '</li>';
@@ -20,41 +54,44 @@ init = () => {
 init();
 
 show = i => {
-  document.getElementById('word_text').innerHTML = dictionary[i].word;
-  document.getElementById('definition').innerHTML = dictionary[i].def1;
+  intro.classList.add('hidden');
+  word.classList.remove('hidden');
+  def1.classList.remove('hidden');
+  word.innerHTML = dictionary[i].word;
+  def1.innerHTML = dictionary[i].def1;
 
   // check if def2 exists and it matches with it
 
   if (dictionary[i].def2 && dictionary[i].def2.length >= 1) {
-    document.getElementById('definition2').innerHTML = dictionary[i].def2;
+    def2.innerHTML = dictionary[i].def2;
+    def2.classList.remove('hidden');
   } else {
-    document.getElementById('definition2').innerHTML = '';
+    def2.innerHTML = '';
   }
 
   // etym
 
-  let etymHr = document.getElementById('etymHr');
-
   if (dictionary[i].etym) {
+    etym.classList.remove('hidden');
     etymHr.classList.remove('hidden');
-    document.getElementById('etym').innerHTML = dictionary[i].etym;
+    etym.innerHTML = dictionary[i].etym;
   } else {
     etymHr.classList.add('hidden');
-    document.getElementById('etym').innerHTML = '';
+    etym.innerHTML = '';
   }
 
   // hide hr if example doesn't exist
 
-  let exampleHr = document.getElementById('exampleHr');
-
   if (dictionary[i].example) {
+    example.classList.remove('hidden');
+    exampleJp.classList.remove('hidden');
     exampleHr.classList.remove('hidden');
-    document.getElementById('example').innerHTML = dictionary[i].example;
-    document.getElementById('exampleJp').innerHTML = dictionary[i].exampleJp;
+    example.innerHTML = dictionary[i].example;
+    exampleJp.innerHTML = dictionary[i].exampleJp;
   } else {
     exampleHr.classList.add('hidden');
-    document.getElementById('example').innerHTML = '';
-    document.getElementById('exampleJp').innerHTML = '';
+    example.innerHTML = '';
+    exampleJp.innerHTML = '';
   }
 
   // rel section
@@ -62,12 +99,17 @@ show = i => {
   let list = '';
 
   for (let j = 0; j < dictionary[i].rel.length; j++) {
+    relWord.innerHTML = 'Related words:';
+    relWord.classList.remove('hidden');
+    rel.classList.remove('hidden');
+    relHr.classList.remove('hidden');
+    relWord.classList.remove('visibility-hidden');
     list += '<li>' + dictionary[i].rel[j] + '</li>';
-    document.getElementById('related').innerHTML = list;
+    rel.innerHTML = list;
   }
 };
 
-show(0);
+// show(0);
 
 search = () => {
   query = document.getElementById('search').value;
@@ -94,16 +136,16 @@ search = () => {
       found = i;
       break;
     } else {
-      document.getElementById(
-        'word_text'
-      ).innerHTML = `NOT THE LLAMA YOU'RE LOOKING FOR<br>ラマが見つかりません`;
-      document.getElementById('definition').innerHTML = '';
-      document.getElementById('definition2').innerHTML = '';
-      document.getElementById('example').innerHTML = '';
-      document.getElementById('exampleJp').innerHTML = '';
-      document.getElementById('etym').innerHTML = '';
-      document.getElementById('related').innerHTML =
-        'NO RELATED LLAMAS<br>関連するラマが見つかりません';
+      word.innerHTML = `NOT THE LLAMA YOU'RE LOOKING FOR<br>ラマが見つかりません`;
+      def1.innerHTML = '';
+      def2.innerHTML = '';
+      example.innerHTML = '';
+      exampleJp.innerHTML = '';
+      etym.innerHTML = '';
+      rel.innerHTML = '';
+      relWord.innerHTML = '';
+      gnocchiImg.classList.add('hidden');
+      relHr.classList.add('hidden');
       exampleHr.classList.add('hidden');
       etymHr.classList.add('hidden');
     }
