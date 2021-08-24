@@ -3,8 +3,12 @@
 const exampleHr = document.getElementById('exampleHr');
 const etymHr = document.getElementById('etymHr');
 const relHr = document.getElementById('relHr');
-const relWordText = document.getElementById('relatedWordText');
-const intro = document.getElementById('intro');
+const intro = document.querySelector('.intro');
+const text = document.querySelector('.text');
+const gnocchiImg = document.getElementById('gnocchiImg');
+const intro2 = document.querySelector('.intro2');
+const text2 = document.querySelector('.text2');
+const gnocchiImg2 = document.getElementById('gnocchiImg2');
 const title = document.getElementById('title');
 const word = document.getElementById('word_text');
 const def1 = document.getElementById('definition');
@@ -14,7 +18,6 @@ const example = document.getElementById('example');
 const exampleJp = document.getElementById('exampleJp');
 const relWord = document.getElementById('relatedWordText');
 const rel = document.getElementById('related');
-const gnocchiImg = document.getElementById('gnocchiImg');
 
 init = () => {
   document.addEventListener('keyup', event => {
@@ -28,7 +31,11 @@ init = () => {
 
   title.addEventListener('click', () => {
     intro.classList.remove('hidden');
+    text.classList.remove('hidden');
     gnocchiImg.classList.remove('hidden');
+    intro2.classList.remove('hidden');
+    text2.classList.remove('hidden');
+    gnocchiImg2.classList.remove('hidden');
     word.classList.add('hidden');
     def1.classList.add('hidden');
     def2.classList.add('hidden');
@@ -55,6 +62,11 @@ init();
 
 show = i => {
   intro.classList.add('hidden');
+  gnocchiImg.classList.add('hidden');
+  text.classList.add('hidden');
+  intro2.classList.add('hidden');
+  gnocchiImg2.classList.add('hidden');
+  text2.classList.add('hidden');
   word.classList.remove('hidden');
   def1.classList.remove('hidden');
   word.innerHTML = dictionary[i].word;
@@ -96,16 +108,21 @@ show = i => {
 
   // rel section
 
-  let list = '';
+  if (dictionary[i].rel) {
+    let list = '';
 
-  for (let j = 0; j < dictionary[i].rel.length; j++) {
-    relWord.innerHTML = 'Related words:';
-    relWord.classList.remove('hidden');
-    rel.classList.remove('hidden');
-    relHr.classList.remove('hidden');
-    relWord.classList.remove('visibility-hidden');
-    list += '<li>' + dictionary[i].rel[j] + '</li>';
-    rel.innerHTML = list;
+    for (let j = 0; j < dictionary[i].rel.length; j++) {
+      relWord.innerHTML = 'Related words:';
+      relWord.classList.remove('hidden');
+      rel.classList.remove('hidden');
+      relHr.classList.remove('hidden');
+      relWord.classList.remove('visibility-hidden');
+      list += '<li>' + dictionary[i].rel[j] + '</li>';
+      rel.innerHTML = list;
+    }
+  } else {
+    relWord.classList.add('hidden');
+    rel.classList.add('hidden');
   }
 };
 
@@ -144,7 +161,13 @@ search = () => {
       etym.innerHTML = '';
       rel.innerHTML = '';
       relWord.innerHTML = '';
+      word.classList.remove('hidden');
+      intro.classList.add('hidden');
+      text.classList.add('hidden');
       gnocchiImg.classList.add('hidden');
+      intro2.classList.add('hidden');
+      text2.classList.add('hidden');
+      gnocchiImg2.classList.add('hidden');
       relHr.classList.add('hidden');
       exampleHr.classList.add('hidden');
       etymHr.classList.add('hidden');

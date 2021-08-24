@@ -249,7 +249,6 @@ const dictionary = [
     def2: '',
     example: ``,
     exampleJp: '',
-    rel: [''],
   },
   {
     word: 'lobby',
@@ -320,7 +319,6 @@ const dictionary = [
     word: 'rarity',
     def1: '武器のレアリティ',
     def2: [''],
-    rel: '',
   },
 
   {
@@ -334,7 +332,6 @@ const dictionary = [
     def1: '乱数（≒運）',
     def2: [''],
     etym: `'random number generator'の略`,
-    rel: '',
     altMatch: ['rng'],
   },
   {
@@ -481,7 +478,6 @@ const dictionary = [
     word: 'wall',
     def1: '壁',
     def2: [''],
-    rel: [''],
   },
   {
     word: 'wood',

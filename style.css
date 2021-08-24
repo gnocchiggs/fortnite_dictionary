@@ -15,7 +15,7 @@
 
 body {
   font-size: 30px;
-  font-family: 'Burbank Big Condensed';
+  font-family: 'Burbank Big Condensed', 'Meiryo';
 }
 
 .header {
@@ -41,8 +41,28 @@ p {
   visibility: hidden;
 }
 
-.intro {
+.flex {
   display: flex;
+}
+
+.intro {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.intro2 {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.text {
+  margin-left: 10px;
+}
+
+.text2 {
+  margin-left: 10px;
 }
 
 .wrapper {
@@ -73,6 +93,10 @@ p {
 #word_list {
   max-height: 600px;
   overflow-y: scroll;
+}
+
+#word_text {
+  margin-top: -35px;
 }
 
 li {
@@ -164,8 +188,8 @@ button {
 }
 
 img.gnocchi {
-  width: 100px;
-  height: 100px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
 }
 
@@ -213,7 +237,7 @@ img.gnocchi:hover {
     width: 70%;
     margin: 40px auto 0px;
     color: white;
-    background: #483d8b;
+    background: radial-gradient(#00b4fa, #0058e0);
     text-align: center;
     border: 1px solid gray;
     border-radius: 8px 8px 0px 0px;
@@ -251,6 +275,12 @@ img.gnocchi:hover {
   #word_list {
     max-height: 350px;
     overflow-y: scroll;
+  }
+
+  img.gnocchi {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
   }
 
   li {
@@ -316,7 +346,7 @@ img.gnocchi:hover {
     width: 70%;
     margin: 0px auto 0px;
     color: white;
-    background: #483d8b;
+    background: #0058e0;
     text-align: center;
     border: 1px solid gray;
     border-radius: 0px 0px 8px 8px;
