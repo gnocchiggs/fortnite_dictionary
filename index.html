@@ -1,78 +1,24 @@
 <!DOCTYPE html>
-<!-- 
-EN/JP switch button
--->
-<html lang="ja">
+<html lang="en">
   <head>
-    <meta
-      charset="utf-8"
-      name="viewport"
-      content="width=device-width, initial-scale=1,
-               minimum-scale=1, user-scalable=yes"
-    />
-    <title>フォートナイト英語辞書 / FORTNITE English Dictionary</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="shortcut icon" href="dictionary.ico" type="image/x-icon" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Engage!</title>
   </head>
   <body>
-    <div class="header">
-      <h1 lang="ja" id="title">FORTNITE English Dictionary α</h1>
-    </div>
-
-    <div class="wrapper">
-      <div class="words">
-        <input type="text" id="search" placeholder="search ..." />
-        <ul id="word_list"></ul>
+    <header>
+      <div class="stats">
+        <center>GUEST</center>
+        HP: 99 <br />MP: 33<br />LV: 15<br />
       </div>
+    </header>
 
-      <div class="word">
-        <div id="intro">
-          <br />
-          <a
-            href="https://www.youtube.com/channel/UCeQBWK2EF4yJUBsUN3vHHDw"
-            target="blank"
-          >
-            <img src="img/twgnocchi.png" class="gnocchi" id="gnocchiImg" />
-          </a>
-        </div>
-        <h3 id="word_text"></h3>
-        <p id="definition"></p>
-        <p id="definition2"></p>
-
-        <hr id="exampleHr" class="hidden" />
-
-        <p id="example"></p>
-        <p id="exampleJp"></p>
-
-        <hr id="etymHr" class="hidden" />
-
-        <p id="etym"></p>
-
-        <hr id="relHr" class="hidden" />
-
-        <h3 id="relatedWordText" class="visibility-hidden">Related words:</h3>
-        <ul id="related"></ul>
-      </div>
-    </div>
-
-    <div class="footer">
-      <p class="credit">created by Gnocchi</p>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      />
-      <a
-        href="https://www.youtube.com/channel/UCeQBWK2EF4yJUBsUN3vHHDw"
-        target="_blank"
-        class="fa fa-youtube"
-      ></a>
-      <a
-        href="https://twitter.com/Gnocchi_Games"
-        target="+"
-        class="fa fa-twitter"
-      ></a>
-    </div>
-    <script src="dictionary.js"></script>
-    <script src="function.js"></script>
+    <main>
+      <img class="gnocchi" src="nesgnocchi.png" />
+    </main>
+    <!-- This will disappear after a few seconds and commands will appear -->
+    <footer><h1>A wild Ryoki appeared!</h1></footer>
   </body>
 </html>
