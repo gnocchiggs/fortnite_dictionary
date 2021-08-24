@@ -1,8 +1,8 @@
 // search by japanese words too
 
 init = () => {
-  document.addEventListener("keyup", (event) => {
-    const searchElem = document.getElementById("search");
+  document.addEventListener('keyup', event => {
+    const searchElem = document.getElementById('search');
     if (event.keyCode === 13) {
       if (searchElem === document.activeElement) {
         search();
@@ -11,44 +11,66 @@ init = () => {
   });
 
   for (let i = 0; i < dictionary.length; i++) {
-    document.getElementById("word_list").innerHTML +=
-      "<li onclick='show(" + i + ")'>" + dictionary[i].word + "</li>";
+    document.getElementById('word_list').innerHTML +=
+      "<li onclick='show(" + i + ")'>" + dictionary[i].word + '</li>';
   }
 };
 
 // call the init function when page loads
 init();
 
-show = (i) => {
-  document.getElementById("word_text").innerHTML = dictionary[i].word;
-  document.getElementById("definition").innerHTML = dictionary[i].def1;
+show = i => {
+  document.getElementById('word_text').innerHTML = dictionary[i].word;
+  document.getElementById('definition').innerHTML = dictionary[i].def1;
 
   // check if def2 exists and it matches with it
 
   if (dictionary[i].def2 && dictionary[i].def2.length >= 1) {
-      document.getElementById('definition2').innerHTML = dictionary[i].def2;
+    document.getElementById('definition2').innerHTML = dictionary[i].def2;
   } else {
     document.getElementById('definition2').innerHTML = '';
   }
-  
-  if (dictionary[i].etym)  {
+
+  // etym
+
+  let etymHr = document.getElementById('etymHr');
+
+  if (dictionary[i].etym) {
+    etymHr.classList.remove('hidden');
     document.getElementById('etym').innerHTML = dictionary[i].etym;
   } else {
-    document.getElementById('etym').innerHTML = "";
+    etymHr.classList.add('hidden');
+    document.getElementById('etym').innerHTML = '';
   }
 
-  let list = "";
+  // hide hr if example doesn't exist
+
+  let exampleHr = document.getElementById('exampleHr');
+
+  if (dictionary[i].example) {
+    exampleHr.classList.remove('hidden');
+    document.getElementById('example').innerHTML = dictionary[i].example;
+    document.getElementById('exampleJp').innerHTML = dictionary[i].exampleJp;
+  } else {
+    exampleHr.classList.add('hidden');
+    document.getElementById('example').innerHTML = '';
+    document.getElementById('exampleJp').innerHTML = '';
+  }
+
+  // rel section
+
+  let list = '';
 
   for (let j = 0; j < dictionary[i].rel.length; j++) {
-    list += "<li>" + dictionary[i].rel[j] + "</li>";
-    document.getElementById("related").innerHTML = list;
+    list += '<li>' + dictionary[i].rel[j] + '</li>';
+    document.getElementById('related').innerHTML = list;
   }
 };
 
 show(0);
 
 search = () => {
-  query = document.getElementById("search").value;
+  query = document.getElementById('search').value;
   if (!query) {
     return;
   }
@@ -72,10 +94,18 @@ search = () => {
       found = i;
       break;
     } else {
-      document.getElementById("word_text").innerHTML = "LLAMA NOT FOUND";
-      document.getElementById("definition").innerHTML =
-        "NOT THE LLAMA YOU'RE LOOKING FOR";
-      document.getElementById("related").innerHTML = "NO RELATED LLAMAS";
+      document.getElementById(
+        'word_text'
+      ).innerHTML = `NOT THE LLAMA YOU'RE LOOKING FOR<br>ラマが見つかりません`;
+      document.getElementById('definition').innerHTML = '';
+      document.getElementById('definition2').innerHTML = '';
+      document.getElementById('example').innerHTML = '';
+      document.getElementById('exampleJp').innerHTML = '';
+      document.getElementById('etym').innerHTML = '';
+      document.getElementById('related').innerHTML =
+        'NO RELATED LLAMAS<br>関連するラマが見つかりません';
+      exampleHr.classList.add('hidden');
+      etymHr.classList.add('hidden');
     }
   }
 

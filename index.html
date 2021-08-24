@@ -2,7 +2,7 @@
 <!-- 
 EN/JP switch button
 -->
-<html lang='ja'>
+<html lang="ja">
   <head>
     <meta
       charset="utf-8"
@@ -12,11 +12,11 @@ EN/JP switch button
     />
     <title>フォートナイト英語辞書 / FORTNITE English Dictionary</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="shortcut icon" href="dictionary.ico" type="image/x-icon"> 
+    <link rel="shortcut icon" href="dictionary.ico" type="image/x-icon" />
   </head>
   <body>
     <div class="header">
-      <h1 lang='ja'>フォートナイト英語辞書α</h1>
+      <h1 lang="ja">フォートナイト英語辞書α</h1>
     </div>
 
     <div class="wrapper">
@@ -28,10 +28,18 @@ EN/JP switch button
       <div class="word">
         <h3 id="word_text"></h3>
         <p id="definition"></p>
-        <p id='definition2'></p>
-        <p id='etym'></p>
+        <p id="definition2"></p>
 
-        <hr />
+        <hr id="exampleHr" />
+
+        <p id="example"></p>
+        <p id="exampleJp"></p>
+
+        <hr id="etymHr" />
+
+        <p id="etym"></p>
+
+        <hr id="relHr" />
 
         <h3>Related words:</h3>
         <ul id="related"></ul>
@@ -39,13 +47,21 @@ EN/JP switch button
     </div>
 
     <div class="footer">
-      <p class='credit'>created by Gnocchi</p>
+      <p class="credit">created by Gnocchi</p>
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-      <a href="https://www.youtube.com/channel/UCeQBWK2EF4yJUBsUN3vHHDw" target="_blank" class="fa fa-youtube"></a>
-      <a href="https://twitter.com/Gnocchi_Games" target=+ class="fa fa-twitter"></a>
+      <a
+        href="https://www.youtube.com/channel/UCeQBWK2EF4yJUBsUN3vHHDw"
+        target="_blank"
+        class="fa fa-youtube"
+      ></a>
+      <a
+        href="https://twitter.com/Gnocchi_Games"
+        target="+"
+        class="fa fa-twitter"
+      ></a>
     </div>
     <script src="dictionary.js"></script>
     <script src="function.js"></script>
