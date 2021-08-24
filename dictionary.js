@@ -330,6 +330,14 @@ const dictionary = [
     rel: ['ressurect', 'revive'],
   },
   {
+    word: 'RNG',
+    def1: '乱数（≒運）',
+    def2: [''],
+    etym: `'random number generator'の略`,
+    rel: '',
+    altMatch: ['rng'],
+  },
+  {
     word: 'rotate',
     def1: '移動する',
     def2: '',
