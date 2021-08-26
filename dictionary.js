@@ -4,7 +4,6 @@ const dictionary = [
   {
     word: 'above',
     def1: '上',
-    def2: '',
     example: `There's a full trio above us.`,
     exampleJp: '私達の上に敵のトリオが居る。',
     rel: ['shield', 'goat'],
@@ -12,7 +11,6 @@ const dictionary = [
   {
     word: 'AK',
     def1: 'ヘビーアサルトライフル',
-    def2: [''],
     etym: `実在している銃の"AK-47"から`,
     rel: ['AR'],
     example: 'There is a blue AK.',
@@ -22,7 +20,6 @@ const dictionary = [
   {
     word: 'AR',
     def1: `アサルトライフル`,
-    def2: [''],
     example: 'What AR do you have?',
     exampleJp: '何のアサルト持ってる？',
     etym: `"assault rifle"の略`,
@@ -32,7 +29,6 @@ const dictionary = [
   {
     word: 'ammo',
     def1: '弾、弾薬',
-    def2: [''],
     example: 'Can I have some sniper ammo?',
     exampleJp: 'スナイパーの弾貰える？',
     etym: `"ammunition"の略`,
@@ -41,7 +37,6 @@ const dictionary = [
   {
     word: 'beam',
     def1: '大ダメージを与える',
-    def2: [''],
     example: 'I lasered Aura!',
     exampleJp: 'オーラに大ダメージ与えたよ！',
     rel: ['laser', 'hit'],
@@ -49,7 +44,6 @@ const dictionary = [
   {
     word: 'below',
     def1: '下',
-    def2: '',
     example: `Don't go down below.`,
     exampleJp: '下には行かないでおこうね。',
     rel: ['above', 'layer'],
@@ -57,13 +51,11 @@ const dictionary = [
   {
     word: 'brick',
     def1: 'レンガ、石材',
-    def2: '',
     rel: ['wood', 'metal', 'build'],
   },
   {
     word: 'bleed',
     def1: '貫通する',
-    def2: [''],
     example: `SMGs bleed through a wall even though you keep holding it.`,
     exampleJp: '壁貼り続けていてもサブマシンガンの弾は貫通する。',
     rel: ['SMG', 'wall'],
@@ -71,7 +63,6 @@ const dictionary = [
   {
     word: 'blue',
     def1: 'レア、青武器',
-    def2: [''],
     rel: ['rare', 'rarity'],
     etym: 'レアレアリティの青色から',
   },
@@ -85,7 +76,6 @@ const dictionary = [
   {
     word: 'bullet',
     def1: '弾',
-    def2: [''],
     example: `I had no bullets.`,
     exampleJp: '弾が無かった。',
     rel: ['ammo', 'shell'],
@@ -115,7 +105,6 @@ const dictionary = [
   {
     word: 'default',
     def1: '初期スキン',
-    def2: [''],
     rel: ['skin'],
   },
   {
@@ -135,19 +124,16 @@ const dictionary = [
   {
     word: 'edit',
     def1: '編集',
-    def2: [''],
     rel: ['edit course', 'wheel reset'],
   },
   {
     word: 'floor',
     def1: '床',
-    def2: [''],
     rel: ['build', 'piece'],
   },
   {
     word: 'fragger',
     def1: 'リフレッシュ役',
-    def2: '',
     rel: ['IGL', 'support'],
   },
   {
@@ -161,7 +147,6 @@ const dictionary = [
   {
     word: 'goat',
     def1: `とても上手`,
-    def2: [''],
     rel: ['cracked'],
     etym: `"greatest of all time"の略、直訳すると「史上最高」という意味`,
     altMatch: ['goated'],
@@ -169,14 +154,12 @@ const dictionary = [
   {
     word: 'gold',
     def1: 'レジェンダリー、金武器',
-    def2: [''],
     rel: ['legendary', 'rarity'],
     etym: 'レジェンダリーレアリティの金色から',
   },
   {
     word: 'green',
     def1: 'アンコモン、緑武器',
-    def2: [''],
     rel: ['uncommon', 'rarity'],
     etym: `アンコモンレアリティの緑色から`,
     altMatch: ['rarity'],
@@ -184,10 +167,13 @@ const dictionary = [
   {
     word: 'grey',
     def1: 'コモン、白武器',
-    def2: [''],
     rel: [''],
     etym: `コモンレアリティの灰色から`,
     altMatch: ['common', 'rarity'],
+  },
+  {
+    word: 'grief',
+    def1: '嫌がらせをする、害悪プレイをする',
   },
   {
     word: 'hard mats',
@@ -201,13 +187,11 @@ const dictionary = [
   {
     word: 'health',
     def1: '体力',
-    def2: [''],
     rel: ['shield', 'heal'],
   },
   {
     word: 'height',
     def1: 'ハイグラ、高地',
-    def2: [''],
     rel: ['low ground'],
   },
   {
@@ -219,26 +203,22 @@ const dictionary = [
   {
     word: 'hot drop',
     def1: '激戦区',
-    def2: '',
     rel: ['POI'],
   },
   {
     word: 'IGL',
     def1: 'リーダー',
-    def2: '',
     etym: `'in-game leader'の略`,
     rel: ['fragger', 'support'],
   },
   {
     word: 'laser',
     def1: '大ダメージを与える',
-    def2: [''],
     rel: ['beam', 'hit'],
   },
   {
     word: 'kid',
     def1: '敵',
-    def2: '',
     etym: `フォートナイトのプレイヤーの多くが子供であることから`,
     example: `There's a kid on the zip line!`,
     exampleJp: 'ジップラインに敵が乗っているよ！',
@@ -246,17 +226,21 @@ const dictionary = [
   {
     word: 'land',
     def1: '降りる',
-    def2: '',
     example: `'I'm gonna land on that roof.'`,
     exampleJp: 'あの屋根に降りるね。',
     rel: ['drop'],
   },
   {
+    word: 'launch pad',
+    def1: 'ジャンプパッド、ジャンパ',
+    example: `Let's use that launch pad.`,
+    exampleJp: 'あのジャンパ使おう。',
+    altMatch: ['ジャンパ', 'ジャンプパッド'],
+    rel: ['pad'],
+  },
+  {
     word: 'layer',
     def1: '段',
-    def2: '',
-    example: ``,
-    exampleJp: '',
   },
   {
     word: 'lobby',
@@ -266,7 +250,6 @@ const dictionary = [
   {
     word: 'mats',
     def1: '資材',
-    def2: '',
     etym: `'materials'の略`,
     example: 'You have good mats.',
     exampleJp: '（味方の資材状況を見ながら）資材まだまだあるよ。',
@@ -288,14 +271,21 @@ const dictionary = [
   {
     word: 'mini',
     def1: 'ミニポ',
-    def2: '',
     rel: ['big', 'shield'],
   },
   {
     word: 'on me',
     def1: '（敵が）自分の所に居る',
-    def2: [''],
     rel: ['here'],
+  },
+  {
+    word: 'pad',
+    def1: 'コントローラー、パッド',
+    def2: 'ジャンプパッドを使う',
+    etym: `"game pad"の略`,
+    etym2: `"launch pad"の略`,
+    rel: ['hot drop'],
+    altMatch: ['point of interest', 'poi'],
   },
   {
     word: 'piece control',
@@ -306,46 +296,62 @@ const dictionary = [
   {
     word: 'POI',
     def1: '地名付きの場所',
-    def2: [''],
     rel: ['hot drop'],
     altMatch: ['point of interest', 'poi'],
   },
   {
     word: 'purple',
     def1: 'エピック、紫武器',
-    def2: [''],
     rel: ['epic', 'rarity'],
     etym: 'エピックレアリティの紫色から',
   },
   {
+    word: 'quad',
+    def1: '4連続の',
+    etym: `"quadruple"の略`,
+    example: `I'm practicing quad edits in creative.`,
+    exampleJp:
+      '今はクリエでクアッドエディット*を練習しています。<br />*4連続で屋根床屋根壁編集をすること',
+    rel: ['single', 'double', 'triple', 'edit'],
+    altMatch: ['quadruple'],
+  },
+  {
+    word: 'qual',
+    def1: '進出する',
+    etym: `"qualify"の略`,
+    example: `We qualed for the last season's FNCS final.`,
+    exampleJp: '私達は前シーズンのFNCS決勝まで行ったよ。',
+    rel: ['comp'],
+    altMatch: ['qualify', 'qualed'],
+  },
+  {
+    word: 'rarity',
+    def1: '武器のレアリティ',
+  },
+  {
     word: 'ramp',
     def1: '階段',
-    def2: [''],
     rel: ['stair', 'build'],
   },
   {
     word: 'rarity',
     def1: '武器のレアリティ',
-    def2: [''],
   },
 
   {
     word: 'res',
     def1: '蘇生',
-    def2: [''],
     rel: ['ressurect', 'revive'],
   },
   {
     word: 'RNG',
     def1: '乱数（≒運）',
-    def2: [''],
     etym: `'random number generator'の略`,
     altMatch: ['rng'],
   },
   {
     word: 'rotate',
     def1: '移動する',
-    def2: '',
     rel: ['move', 'storm'],
     example: 'We gotta rotate to zone.',
     exampleJp: '安地に行こう。',
@@ -353,20 +359,17 @@ const dictionary = [
   {
     word: 'roof',
     def1: '屋根',
-    def2: [''],
     rel: ['cone', 'build'],
   },
   {
     word: 'scrim',
     def1: '練習試合、スクリム',
-    def2: [''],
     etym: `"scrimmage"の略`,
     rel: ['comp', 'match'],
   },
   {
     word: 'shell',
     def1: 'ショットガンの弾',
-    def2: '',
     example: 'Do you have shotgun shells?',
     exampleJp: 'ショットガンの弾持ってる？',
     rel: ['ammo', 'bullet', 'shotty'],
@@ -376,14 +379,12 @@ const dictionary = [
   {
     word: 'shield',
     def1: 'シールド',
-    def2: [''],
     rel: ['mini', 'big'],
     altMatch: ['シールド'],
   },
   {
     word: 'shotty',
     def1: 'ショットガン',
-    def2: '',
     example: 'Let me know if you see a shotty.',
     exampleJp: 'ショットガン見つけたら教えて。',
     rel: ['pump', 'SPAS'],
@@ -396,7 +397,6 @@ const dictionary = [
   {
     word: 'stair',
     def1: '階段',
-    def2: [''],
     rel: ['ramp', 'build', 'piece'],
     altMatch: ['stairs'],
   },
@@ -411,16 +411,14 @@ const dictionary = [
   {
     word: 'SPAS',
     def1: '紫以上のポンプショットガン',
-    def2: '',
     example: 'I found a SPAS!',
-    exampleJp: '',
+    exampleJp: '紫/金ポン見つけた！',
     etym: `実在する銃の"SPAS-12'から`,
     rel: ['pump', 'shotty'],
   },
   {
     word: 'spray',
     def1: '撃ちまくる',
-    def2: [''],
     rel: ['beam', 'laser', 'hit'],
   },
   {
@@ -434,12 +432,16 @@ const dictionary = [
   {
     word: 'strat',
     def1: '戦術',
-    def2: [''],
     rel: ['ressurect', 'revive'],
     example: `We lost to Qrei strat.`,
-    exampleJp: `Qreiムーブに負けた。<br>（回復アイテムを集めまくってひたすら安地外耐久する戦術）`,
+    exampleJp: `Qreiムーブ*に負けた。<br>*回復アイテムを集めまくってひたすら安地外耐久する戦術`,
     etym: `"strategy"の略`,
     altMatch: ['strategy'],
+  },
+  {
+    word: 'stream snipe',
+    def1: 'ゴースティングをする',
+    altMatch: ['ghosting', 'ゴースティング', 'stream sniper'],
   },
   {
     word: 'support',
@@ -450,7 +452,6 @@ const dictionary = [
   {
     word: 'sweat',
     def1: '（皮肉を込めて）ガチ勢',
-    def2: '',
     etym: `汗をかく程必死にプレイしているという皮肉から`,
     example: `I hope we don't run into sweats.`,
     exampleJp: 'ガチ勢と当たらないといいけど。',
@@ -465,16 +466,21 @@ const dictionary = [
     rel: ['shotty', 'pump'],
   },
   {
+    word: 'tag',
+    def1: 'ダメージを与える、当てる',
+    example: 'I tagged him for 50!',
+    exampleJp: '50与えた！',
+    rel: ['beam', 'laser', 'hit'],
+  },
+  {
     word: 'tarp',
     def1: '移動安地の時に建築で安全な道筋を作ること',
-    def2: [''],
     rel: ['tunnel'],
     altMatch: ['tarping'],
   },
   {
     word: 'tunnel',
     def1: 'トンネル建築',
-    def2: '',
     example: `I gotta practice tunnelling.`,
     exampleJp: 'トンネルの練習しないと。',
     rel: ['tarp', 'build'],
@@ -490,32 +496,27 @@ const dictionary = [
   {
     word: 'wall',
     def1: '壁',
-    def2: [''],
   },
   {
     word: 'wood',
     def1: '木、木材',
-    def2: '',
     rel: ['brick', 'metal', 'build'],
   },
   {
     word: '1x1',
     def1: '(1x1タイルの)ボックス',
-    def2: [''],
     rel: ['box', '2x2'],
     altMatch: ['one by one'],
   },
   {
     word: '1x2',
     def1: '(1x2タイルの)ボックス',
-    def2: [''],
     rel: ['1x1', 'box'],
     altMatch: ['two by two'],
   },
   {
     word: '90s',
     def1: '縦積み',
-    def2: [''],
     etym: '1回の縦積みで90°進行方向が変わることから',
     rel: ['cranking', 'build'],
   },
