@@ -15,7 +15,7 @@
 
 body {
   font-size: 30px;
-  font-family: 'Burbank Big Condensed', 'Meiryo';
+  font-family: 'Burbank Big Condensed', 'Meiryo UI';
 }
 
 .header {
@@ -27,6 +27,11 @@ body {
   text-align: center;
   border: 1px solid gray;
   border-radius: 8px 8px 0px 0px;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
 }
 
 p {
@@ -57,11 +62,21 @@ p {
   margin-left: 10px;
 }
 
+.intro3 {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
 .text {
   margin-left: 10px;
 }
 
 .text2 {
+  margin-left: 10px;
+}
+
+.text3 {
   margin-left: 10px;
 }
 
@@ -229,7 +244,7 @@ img.gnocchi:hover {
 @media screen and (max-width: 480px) {
   body {
     font-size: 15px;
-    font-family: 'Burbank Big Condensed', 'MSゴシック';
+    font-family: 'Burbank Big Condensed', 'Meiryo UI';
   }
 
   .header {
@@ -245,6 +260,21 @@ img.gnocchi:hover {
 
   p {
     font-size: 10px;
+  }
+
+  .text {
+    margin-left: 10px;
+    font-size: 0.7em;
+  }
+
+  .text2 {
+    font-size: 0.7em;
+    margin-left: 10px;
+  }
+
+  .text3 {
+    font-size: 0.7em;
+    margin-left: 10px;
   }
 
   .wrapper {
