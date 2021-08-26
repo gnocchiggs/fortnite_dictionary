@@ -229,12 +229,12 @@ img.gnocchi:hover {
 @media screen and (max-width: 480px) {
   body {
     font-size: 15px;
-    font-family: 'Burbank Big Condensed';
+    font-family: 'Burbank Big Condensed', 'MSゴシック';
   }
 
   .header {
     font-size: 10px;
-    width: 70%;
+    width: 90%;
     margin: 40px auto 0px;
     color: white;
     background: radial-gradient(#00b4fa, #0058e0);
@@ -248,7 +248,7 @@ img.gnocchi:hover {
   }
 
   .wrapper {
-    width: 70%;
+    width: 90%;
     margin: 0px auto;
     border: 1px solid gray;
   }
@@ -343,7 +343,7 @@ img.gnocchi:hover {
 
   .footer {
     font-size: 25px;
-    width: 70%;
+    width: 90%;
     margin: 0px auto 0px;
     color: white;
     background: #0058e0;
