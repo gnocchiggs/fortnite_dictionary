@@ -49,11 +49,6 @@ const dictionary = [
     rel: ['above', 'layer'],
   },
   {
-    word: 'brick',
-    def1: 'レンガ、石材',
-    rel: ['wood', 'metal', 'build'],
-  },
-  {
     word: 'bleed',
     def1: '貫通する',
     example: `SMGs bleed through a wall even though you keep holding it.`,
@@ -72,6 +67,11 @@ const dictionary = [
     def1: 'ボックス',
     def2: 'ボックスに閉じ込める',
     rel: ['1x1', '1x2', 'piece control'],
+  },
+  {
+    word: 'brick',
+    def1: 'レンガ、石材',
+    rel: ['wood', 'metal', 'hard mats', 'build'],
   },
   {
     word: 'bullet',
@@ -143,6 +143,11 @@ const dictionary = [
     rel: ['pop off'],
     etym: `"good game(s)"の略、直訳すると「良い試合」という意味`,
     altMatch: ['good game', 'good games', 'ggs', 'gg'],
+  },
+  {
+    word: 'Gnocchi',
+    def1: 'ニョッキ、このアプリの作者',
+    altMatch: ['gnocchi', 'ニョッキ'],
   },
   {
     word: 'goat',
@@ -266,7 +271,7 @@ const dictionary = [
     word: 'metal',
     def1: '鉄',
     def2: '鉄の建築',
-    rel: ['wood', 'brick', 'build'],
+    rel: ['wood', 'brick', 'hard mats', 'build'],
   },
   {
     word: 'mini',
@@ -282,10 +287,8 @@ const dictionary = [
     word: 'pad',
     def1: 'コントローラー、パッド',
     def2: 'ジャンプパッドを使う',
-    etym: `"game pad"の略`,
-    etym2: `"launch pad"の略`,
-    rel: ['hot drop'],
-    altMatch: ['point of interest', 'poi'],
+    etym: `"game pad"の略<br/>"launch pad"の略`,
+    rel: ['controller', 'launch pad'],
   },
   {
     word: 'piece control',
@@ -477,6 +480,12 @@ const dictionary = [
     def1: '移動安地の時に建築で安全な道筋を作ること',
     rel: ['tunnel'],
     altMatch: ['tarping'],
+  },
+  {
+    word: 'tourney',
+    def1: 'トーナメント',
+    etym: `"tournament"の略`,
+    rel: ['comp'],
   },
   {
     word: 'tunnel',
