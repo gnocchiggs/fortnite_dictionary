@@ -4,11 +4,14 @@ const exampleHr = document.getElementById('exampleHr');
 const etymHr = document.getElementById('etymHr');
 const relHr = document.getElementById('relHr');
 const intro = document.querySelector('.intro');
-const text = document.querySelector('.text');
-const gnocchiImg = document.getElementById('gnocchiImg');
 const intro2 = document.querySelector('.intro2');
+const intro3 = document.querySelector('.intro3');
+const text = document.querySelector('.text');
 const text2 = document.querySelector('.text2');
+const text3 = document.querySelector('.text3');
+const gnocchiImg = document.getElementById('gnocchiImg');
 const gnocchiImg2 = document.getElementById('gnocchiImg2');
+const gnocchiImg3 = document.getElementById('gnocchiImg3');
 const title = document.getElementById('title');
 const word = document.getElementById('word_text');
 const def1 = document.getElementById('definition');
@@ -31,11 +34,14 @@ init = () => {
 
   title.addEventListener('click', () => {
     intro.classList.remove('hidden');
-    text.classList.remove('hidden');
-    gnocchiImg.classList.remove('hidden');
     intro2.classList.remove('hidden');
+    intro3.classList.remove('hidden');
+    text.classList.remove('hidden');
     text2.classList.remove('hidden');
+    text3.classList.remove('hidden');
+    gnocchiImg.classList.remove('hidden');
     gnocchiImg2.classList.remove('hidden');
+    gnocchiImg3.classList.remove('hidden');
     word.classList.add('hidden');
     def1.classList.add('hidden');
     def2.classList.add('hidden');
@@ -62,11 +68,14 @@ init();
 
 show = i => {
   intro.classList.add('hidden');
-  gnocchiImg.classList.add('hidden');
-  text.classList.add('hidden');
   intro2.classList.add('hidden');
+  intro3.classList.add('hidden');
+  gnocchiImg.classList.add('hidden');
   gnocchiImg2.classList.add('hidden');
+  gnocchiImg3.classList.add('hidden');
+  text.classList.add('hidden');
   text2.classList.add('hidden');
+  text3.classList.add('hidden');
   word.classList.remove('hidden');
   def1.classList.remove('hidden');
   word.innerHTML = dictionary[i].word;
@@ -163,11 +172,14 @@ search = () => {
       relWord.innerHTML = '';
       word.classList.remove('hidden');
       intro.classList.add('hidden');
-      text.classList.add('hidden');
-      gnocchiImg.classList.add('hidden');
       intro2.classList.add('hidden');
+      intro3.classList.add('hidden');
+      text.classList.add('hidden');
       text2.classList.add('hidden');
+      text3.classList.add('hidden');
+      gnocchiImg.classList.add('hidden');
       gnocchiImg2.classList.add('hidden');
+      gnocchiImg3.classList.add('hidden');
       relHr.classList.add('hidden');
       exampleHr.classList.add('hidden');
       etymHr.classList.add('hidden');

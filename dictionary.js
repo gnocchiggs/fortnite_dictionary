@@ -61,6 +61,14 @@ const dictionary = [
     rel: ['wood', 'metal', 'build'],
   },
   {
+    word: 'bleed',
+    def1: '貫通する',
+    def2: [''],
+    example: `SMGs bleed through a wall even though you keep holding it.`,
+    exampleJp: '壁貼り続けていてもサブマシンガンの弾は貫通する。',
+    rel: ['SMG', 'wall'],
+  },
+  {
     word: 'blue',
     def1: 'レア、青武器',
     def2: [''],
@@ -379,6 +387,11 @@ const dictionary = [
     example: 'Let me know if you see a shotty.',
     exampleJp: 'ショットガン見つけたら教えて。',
     rel: ['pump', 'SPAS'],
+  },
+  {
+    word: 'SMG',
+    def1: 'サブマシンガン',
+    altMatch: ['smg', 'サブマシンガン', 'サブマ'],
   },
   {
     word: 'stair',
