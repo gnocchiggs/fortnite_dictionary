@@ -79,12 +79,12 @@ show = i => {
   word.classList.remove('hidden');
   def1.classList.remove('hidden');
   word.innerHTML = dictionary[i].word;
-  def1.innerHTML = dictionary[i].def1;
+  def1.innerHTML = dictionary[i].def1.join('、');
 
   // check if def2 exists and it matches with it
 
   if (dictionary[i].def2 && dictionary[i].def2.length >= 1) {
-    def2.innerHTML = dictionary[i].def2;
+    def2.innerHTML = dictionary[i].def2.join(`、`);
     def2.classList.remove('hidden');
   } else {
     def2.innerHTML = '';
@@ -121,12 +121,14 @@ show = i => {
     let list = '';
 
     for (let j = 0; j < dictionary[i].rel.length; j++) {
+      let relArrElem = dictionary[i].rel[j];
       relWord.innerHTML = 'Related words:';
       relWord.classList.remove('hidden');
       rel.classList.remove('hidden');
       relHr.classList.remove('hidden');
       relWord.classList.remove('visibility-hidden');
-      list += '<li>' + dictionary[i].rel[j] + '</li>';
+      list += '<li>' + relArrElem + '</li>';
+      // list += "<li onclick='show(" + j + ")'>" + relArrElem + '</li>';
       rel.innerHTML = list;
     }
   } else {
@@ -134,8 +136,6 @@ show = i => {
     rel.classList.add('hidden');
   }
 };
-
-// show(0);
 
 search = () => {
   query = document.getElementById('search').value;
@@ -145,14 +145,22 @@ search = () => {
 
   found = -1; // initialize found to false
 
-  // check if altMatch exists and it matches with it
-
   for (let i = 0; i < dictionary.length; i++) {
     let sTerms = [];
+
+    // check if altMatch exists and it matches with it
 
     if (dictionary[i].altMatch && dictionary[i].altMatch.length >= 1) {
       for (let f = 0; f < dictionary[i].altMatch.length; f++) {
         sTerms.push(dictionary[i].altMatch[f].toLowerCase());
+      }
+    }
+
+    //check the japanese word matches with def1
+
+    if (dictionary[i].def1) {
+      for (let g = 0; g < dictionary[i].def1.length; g++) {
+        sTerms.push(dictionary[i].def1[g]);
       }
     }
 

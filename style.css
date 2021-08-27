@@ -111,7 +111,7 @@ p {
 }
 
 #word_text {
-  margin-top: -35px;
+  margin-top: -55px;
 }
 
 li {
@@ -127,6 +127,11 @@ li:hover {
 #definition {
   margin-top: -20px;
   margin-left: 5px;
+}
+
+#definition li:not(:last-child)::after {
+  content: '、 ';
+  margin: 0 4px 0 0;
 }
 
 #definition2 {
