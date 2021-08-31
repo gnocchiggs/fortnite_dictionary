@@ -1,4 +1,4 @@
-//add etymology, example section
+//hold, white blue
 
 const dictionary = [
   {
@@ -11,7 +11,7 @@ const dictionary = [
   {
     word: 'AK',
     def1: ['ヘビーアサルトライフル'],
-    etym: `実在している銃の"AK-47"から`,
+    etym: `実在する銃の"AK-47"から`,
     rel: ['AR'],
     example: 'There is a blue AK.',
     exampleJp: 'あそこに青ヘビアサが落ちているよ。',
@@ -61,6 +61,9 @@ const dictionary = [
   {
     word: 'blue',
     def1: ['レア', '青武器'],
+    def2: ['シールドカット'],
+    example: `Hit him for 50 blue.`,
+    exampleJp: '50シールドカット。',
     rel: ['rare', 'rarity'],
     etym: 'レアレアリティの青色から',
     altMatch: ['青', 'あお'],
@@ -95,6 +98,12 @@ const dictionary = [
     altMatch: ['マックス', '上限', 'カンスト'],
   },
   {
+    word: 'chill',
+    def1: ['落ち着いている状態にいる'],
+    example: `"Are you alright?" "Yeah, I'm chilling."`,
+    exampleJp: `"大丈夫？"　"うん、大丈夫だよ。"`,
+  },
+  {
     word: 'crack',
     def1: ['シールドを割る'],
     def2: ['とても上手'],
@@ -119,6 +128,20 @@ const dictionary = [
       '倒された',
       'たおされた',
     ],
+  },
+  {
+    word: 'Deagle',
+    def1: ['ハンドキャノン', 'ハンキャ'],
+    etym: '実在する銃の"Desert Eagle"の略称',
+    altMatch: ['deagle', 'hand cannon'],
+  },
+  {
+    word: 'dead side',
+    def1: [`デッドサイド*`],
+    def1: [`*安地の人が少ないサイドのこと`],
+    example: `I'm dead.`,
+    exampleJp: '倒された。',
+    rel: ['elimination', 'kill', 'down'],
   },
   {
     word: 'default',
@@ -174,7 +197,10 @@ const dictionary = [
   },
   {
     word: 'Gnocchi',
-    def1: ['ニョッキ', 'このアプリの作者'],
+    def1: ['ニョッキ', 'このアプリの作者', 'オーストラリア在住30代ゲーマー'],
+    def2: [
+      '<br/>フォートナイトはC2S2の終わりにSwitchで始め、C2S4でPCに移行。C2S7はキャリーされながら初のDiv10に到達。<br/><br/>大学在学中にイギリスで約1年留学、卒業後ワーキングホリデーで再度イギリスへ渡り、2年弱を過ごす。紆余曲折あり、現在はオーストラリアにて活動中。',
+    ],
     altMatch: ['gnocchi', 'にょっき'],
   },
   {
@@ -225,6 +251,11 @@ const dictionary = [
     altMatch: ['HP'],
   },
   {
+    word: 'heal off',
+    def1: ['回復勝負'],
+    rel: ['shield', 'heal', 'zone'],
+  },
+  {
     word: 'height',
     def1: ['ハイグラ', 'ハイグラウンド', '高地'],
     rel: ['low ground'],
@@ -234,6 +265,13 @@ const dictionary = [
     def1: ['（攻撃を）当てる'],
     def2: ['撃つ'],
     rel: ['tag', 'laser', 'beam'],
+  },
+  {
+    word: 'hold',
+    def1: ['建築を張り続ける'],
+    def2: ['（安地際などで敵を）迎え撃つ'],
+    example: `Hold the wall while I'm healing!`,
+    exampleJp: '回復するから壁張り続けて！',
   },
   {
     word: 'hot drop',
@@ -538,9 +576,23 @@ const dictionary = [
     def1: ['壁'],
   },
   {
+    word: 'white',
+    def1: ['白ダメ', 'シールドの無い状態'],
+    example: `He's' white!`,
+    exampleJp: '（敵が）シールド無いよ！',
+    rel: ['white', 'shield'],
+  },
+  {
     word: 'wood',
     def1: ['木', '木材'],
     rel: ['brick', 'metal', 'build'],
+  },
+  {
+    word: 'zone',
+    def1: ['安地'],
+    example: 'Yes! We got zone!',
+    exampleJp: 'やった！安地入ってる！',
+    rel: ['solo', 'duo', 'squad'],
   },
   {
     word: '1x1',
