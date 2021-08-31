@@ -121,13 +121,25 @@ show = i => {
     let list = '';
 
     for (let j = 0; j < dictionary[i].rel.length; j++) {
-      let relArrElem = dictionary[i].rel[j];
+      // fetch the related entry as an object
+      let relatedEntry = dictionaryFetchEntryByWord(dictionary[i].rel[j]);
+      
+      // if we got a result (there are some related words that don't have a matching entry) set the label from the retrieved entry otherwise set it directly from the parent entry
+      const label = relatedEntry?.word ? relatedEntry.word : dictionary[i].rel[j]
+      
       relWord.innerHTML = 'Related words:';
       relWord.classList.remove('hidden');
       rel.classList.remove('hidden');
       relHr.classList.remove('hidden');
       relWord.classList.remove('visibility-hidden');
-      list += '<li>' + relArrElem + '</li>';
+      
+      // if the related word has it's own entry let's link to it. Otherwise just display the word itself
+      if(relatedEntry){ 
+      list += '<li class="rel-word" onClick="show('+relatedEntry.index+')">' + label + '</li>';  
+      }else{
+      list += '<li class="no-rel">' + label + '</li>';  
+      }
+      
       // list += "<li onclick='show(" + j + ")'>" + relArrElem + '</li>';
       rel.innerHTML = list;
     }
@@ -136,6 +148,19 @@ show = i => {
     rel.classList.add('hidden');
   }
 };
+
+dictionaryFetchEntryByWord = (word) => {
+  
+  // filter the dictionary to match the word
+  let result = dictionary.filter( (entry, index) => {
+    // append the index of the dictionary so that we can use it elsewhere
+    entry.index = index;
+    return entry.word == word
+  });
+  
+  // if we got a result return it
+  return result.length ? result[0] : null;
+}
 
 search = () => {
   query = document.getElementById('search').value;
