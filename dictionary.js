@@ -51,6 +51,13 @@ const dictionary = [
     rel: ['above', 'layer'],
   },
   {
+    word: 'big',
+    def1: ['シールドポーション', 'デカポ'],
+    etym: `big pot（デカポの俗称）の略、'pot'と呼ばれることもある`,
+    rel: ['mini', 'shield'],
+    altMatch: ['big pot', 'pot', 'shielf potion'],
+  },
+  {
     word: 'bleed',
     def1: ['貫通する', '透ける'],
     example: `SMGs bleed through a wall even though you keep holding it.`,
