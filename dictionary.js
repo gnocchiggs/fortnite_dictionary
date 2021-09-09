@@ -104,6 +104,25 @@ const dictionary = [
     exampleJp: `"大丈夫？"　"うん、大丈夫だよ。"`,
   },
   {
+    word: 'con',
+    def1: ['（初動の降下場所が）被る', '（初動の降下場所を）被せる'],
+    def2: [''],
+    example: 'We are conned.',
+    exampleJp: '別パ降りてきてるね。',
+    etym: `"contest"の略`,
+    rel: ['uncon', 'early game'],
+    jp: ['割る', 'わる', '上手', 'うまい', 'クラック'],
+  },
+  {
+    word: 'cow',
+    def1: ['インフレータ・ブルを使う'],
+    def2: [''],
+    example: `He's cowing.`,
+    exampleJp: '（敵が）牛で移動してる。',
+    rel: ['uncon', 'early game'],
+    jp: ['ブル', '牛'],
+  },
+  {
     word: 'crack',
     def1: ['シールドを割る'],
     def2: ['とても上手'],
@@ -149,6 +168,13 @@ const dictionary = [
     rel: ['skin'],
   },
   {
+    word: 'disengage',
+    def1: [`戦闘を止める`, `退く`],
+    example: `Let's disengage, guys. We have enough damage for surge.`,
+    exampleJp: 'みんなもう退こう。サージのダメージは十分稼げたから。',
+    rel: ['engage'],
+  },
+  {
     word: 'drop',
     def1: ['着地する'],
     def2: ['（アイテム等を）落とす'],
@@ -163,6 +189,13 @@ const dictionary = [
     rel: ['shield', 'goat'],
   },
   {
+    word: 'early game',
+    def1: ['初動', '序盤'],
+    example: 'I cracked all of them!',
+    exampleJp: '全員シールド割った！',
+    rel: ['con', 'uncon', 'mid game', 'end game'],
+  },
+  {
     word: 'edit',
     def1: ['編集', 'エディット'],
     rel: ['edit course', 'wheel reset'],
@@ -174,6 +207,12 @@ const dictionary = [
     example: `Look at that kid edit coursing.`,
     exampleJp: 'あそこで敵がイキリ建築してるよ。',
     rel: ['edit'],
+  },
+  {
+    word: 'end game',
+    def1: ['終盤', 'エンドゲーム'],
+    etym: `"contest"の略`,
+    rel: ['early game', 'mid game'],
   },
   {
     word: 'floor',
@@ -341,6 +380,14 @@ const dictionary = [
     rel: ['wood', 'brick', 'hard mats', 'build'],
   },
   {
+    word: 'mid game',
+    def1: ['中盤'],
+    def2: [''],
+    example: `Let's avoid fighting in mid game.`,
+    exampleJp: '中盤で戦うのは避けよう。',
+    rel: ['early game', 'end game'],
+  },
+  {
     word: 'mini',
     def1: ['ミニポ', 'ミニシールドポーション'],
     rel: ['big', 'shield'],
@@ -362,6 +409,16 @@ const dictionary = [
     def1: ['ピースコントロール'],
     def2: [`*敵よりも先に建築を立て、その建築を有利に使って戦うこと`],
     rel: ['build', 'piece'],
+  },
+  {
+    word: 'placement',
+    def1: ['順位', '順位ポイント'],
+    def2: [''],
+    example: 'We are conned.',
+    exampleJp: '別パ降りてきてるね。',
+    etym: `"contest"の略`,
+    rel: ['uncon', 'early game'],
+    jp: ['割る', 'わる', '上手', 'うまい', 'クラック'],
   },
   {
     word: 'POI',
@@ -551,6 +608,13 @@ const dictionary = [
     altMatch: ['tarping'],
   },
   {
+    word: 'third party',
+    def1: ['漁夫', '漁夫をする'],
+    def2: [''],
+    example: 'We are getting third partied!',
+    exampleJp: '漁夫が来てる！',
+  },
+  {
     word: 'tourney',
     def1: ['トーナメント'],
     etym: `"tournament"の略`,
@@ -572,8 +636,19 @@ const dictionary = [
     rel: ['solo', 'duo', 'squad'],
   },
   {
+    word: 'uncon',
+    def1: ['（降下場所が他のプレイヤーと）被っていない'],
+    def2: [''],
+    example: 'We are unconned.',
+    exampleJp: '別パ降りてきていないね。',
+    etym: `"uncontest"の略`,
+    rel: ['con', 'early game'],
+    jp: ['被る'],
+  },
+  {
     word: 'wall',
     def1: ['壁'],
+    rel: ['build', 'ramp', 'stair', 'floor', 'roof', 'cone'],
   },
   {
     word: 'white',
