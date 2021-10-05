@@ -36,6 +36,21 @@ const dictionary = [
     altMatch: ['たま'],
   },
   {
+    word: 'AUG',
+    def1: ['紫/金のバーストアサルトライフル'],
+    etym: `実在する銃の"Steyr AUG"から`,
+    rel: ['AR'],
+    example: 'There is a blue AK.',
+    exampleJp: 'あそこに青ヘビアサが落ちているよ。',
+    altMatch: [
+      'burst',
+      'バースト',
+      'バーストアサルト',
+      'バーストアサルトライフル',
+      'aug',
+    ],
+  },
+  {
     word: 'beam',
     def1: ['大ダメージを与える'],
     example: 'I lasered Aura!',
@@ -109,6 +124,10 @@ const dictionary = [
     def1: ['落ち着いている状態にいる'],
     example: `"Are you alright?" "Yeah, I'm chilling."`,
     exampleJp: `"大丈夫？"　"うん、大丈夫だよ。"`,
+  },
+  {
+    word: 'clutch',
+    def1: ['不利な状況をひっくり返すこと', 'クラッチ'],
   },
   {
     word: 'con',
@@ -359,6 +378,9 @@ const dictionary = [
   {
     word: 'layer',
     def1: ['段'],
+    example: `I'm going up a layer!`,
+    exampleJp: '1段上げるよ！（終盤、ターピングで安置移動している時に）',
+    rel: ['tarp'],
   },
   {
     word: 'lobby',
@@ -400,9 +422,25 @@ const dictionary = [
     rel: ['big', 'shield'],
   },
   {
+    word: 'mobility',
+    def1: ['移動系アイテム'],
+    example: `Do you have any mobility? / Yeah, I have 2 peppers and a pad.`,
+    exampleJp:
+      '移動系アイテム何か持ってる？ / うん、ペッパー2個とジャンパ1枚あるよ。',
+    rel: ['launch pad'],
+  },
+  {
     word: 'on me',
     def1: ['（敵が）自分の所に居る'],
     rel: ['here'],
+  },
+  {
+    word: 'OP',
+    def1: ['（武器やアイテムが）強すぎる'],
+    example: `Man, Rail Gun is OP.`,
+    exampleJp: 'レールガンは強すぎるよな。',
+    etym: `"overpowered"の略`,
+    altMatch: ['op'],
   },
   {
     word: 'pad',
@@ -651,6 +689,22 @@ const dictionary = [
     etym: `"uncontest"の略`,
     rel: ['con', 'early game'],
     jp: ['被る'],
+  },
+  {
+    word: 'unvault',
+    def1: ['保管庫から出る'],
+    rel: ['vault'],
+    example: 'I wish SR was unvaulted this season.',
+    exampleJp: 'スナイパーが今シーズン保管庫から出てきてくれたらなあ。',
+    altMatch: ['unvaulted'],
+  },
+  {
+    word: 'vault',
+    def1: ['保管庫に入る'],
+    rel: ['unvault'],
+    example: 'Tac has been vaulted.',
+    exampleJp: 'タクショが保管庫行きになった。',
+    altMatch: ['vaulted'],
   },
   {
     word: 'wall',
